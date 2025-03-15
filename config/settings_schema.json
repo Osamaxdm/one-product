@@ -1,0 +1,171 @@
+[
+    {
+      "name": "إعدادات عامة",
+      "settings": [
+        {
+          "type": "text",
+          "id": "store_name",
+          "label": "اسم المتجر",
+          "default": "متجري"
+        },
+        {
+          "type": "text",
+          "id": "store_tagline",
+          "label": "وصف قصير للمتجر",
+          "default": "أفضل المنتجات بأفضل الأسعار"
+        },
+        {
+          "type": "color",
+          "id": "primary_color",
+          "label": "اللون الأساسي",
+          "default": "#FF6A00"
+        },
+        {
+          "type": "color",
+          "id": "secondary_color",
+          "label": "اللون الثانوي",
+          "default": "#1E1E1E"
+        },
+        {
+          "type": "color",
+          "id": "cta_color",
+          "label": "لون زر الشراء (CTA)",
+          "default": "#008000"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_dark_mode",
+          "label": "تفعيل الوضع الليلي (Dark Mode)",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_cod",
+          "label": "تفعيل الدفع عند الاستلام (COD)",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_buy_button_float",
+          "label": "إظهار زر الشراء العائم",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_quick_checkout",
+          "label": "تفعيل الشراء السريع (تخطي السلة)",
+          "default": true
+        }
+      ]
+    },
+    {
+      "name": "إعدادات المنتج والعروض",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "enable_countdown",
+          "label": "تفعيل مؤقت العد التنازلي للعرض",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "offer_end_date",
+          "label": "تاريخ انتهاء العرض (YYYY-MM-DD)",
+          "default": ""
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_stock_counter",
+          "label": "إظهار عدّاد المخزون المتبقي",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_bundles",
+          "label": "تفعيل باقات/عروض (اشتر أكثر بسعر أقل)",
+          "default": false
+        }
+      ]
+    },
+    {
+      "name": "إعدادات المصداقية والثقة",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "enable_real_reviews",
+          "label": "إظهار مراجعات العملاء الحقيقية",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_guarantee_badge",
+          "label": "إظهار ختم ضمان استرجاع الأموال",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_social_proof_notifications",
+          "label": "إظهار إشعارات المبيعات الفورية",
+          "default": false
+        }
+      ]
+    },
+    {
+      "name": "إعدادات التواصل والدعم",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "enable_whatsapp_button",
+          "label": "تفعيل زر تواصل واتساب",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_live_chat",
+          "label": "تفعيل المحادثة الفورية (Live Chat)",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "whatsapp_number",
+          "label": "رقم الواتساب (مع مفتاح الدولة)",
+          "default": ""
+        }
+      ]
+    },
+    {
+      "name": "إعدادات اللغة والعملات",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "enable_multi_lang",
+          "label": "تفعيل تعدد اللغات (عربي/إنجليزي)",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_auto_currency",
+          "label": "تفعيل تحويل العملة تلقائيًا",
+          "default": false
+        }
+      ]
+    },
+    {
+      "name": "إعدادات أخرى",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "enable_loyalty_program",
+          "label": "تفعيل نظام الولاء (نقاط المكافآت)",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_flash_sales",
+          "label": "تفعيل عروض الفلاش (لفترة محدودة)",
+          "default": false
+        }
+      ]
+    }
+  ]
+  

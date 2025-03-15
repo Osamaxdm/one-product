@@ -1,0 +1,18 @@
+<header class="site-header">
+  <div class="container">
+    <div class="logo">
+      <!-- عرض اسم المتجر من الإعدادات -->
+      <h1>{{ settings.store_name }}</h1>
+      <p class="tagline">{{ settings.store_tagline }}</p>
+    </div>
+    <nav class="main-menu">
+      <ul>
+        <li><a href="/" title="الرئيسية">الرئيسية</a></li>
+        <li><a href="/product" title="المنتج">المنتج</a></li>
+        <!-- يمكن إضافة روابط أخرى حسب الحاجة -->
+      </ul>
+    </nav>
+    <!-- تضمين روابط التواصل الاجتماعي عبر Snippet -->
+    {% include 'social-links' %}
+  </div>
+</header>

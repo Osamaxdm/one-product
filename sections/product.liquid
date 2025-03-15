@@ -1,0 +1,95 @@
+<section class="product-section">
+  <div class="container">
+    <div class="product-image">
+      <!-- عرض صورة المنتج الرئيسي -->
+      <img src="{{ product.image | img_url: 'large' }}" alt="{{ product.title }}">
+    </div>
+    <div class="product-details">
+      <h2 class="product-title">{{ product.title }}</h2>
+      <p class="product-description">{{ product.description }}</p>
+      
+      <div class="product-price">
+        <span class="price">{{ product.price | money }}</span>
+      </div>
+
+      <!-- زر شراء أساسي -->
+      {% include 'buttons' %}
+      
+      <!-- زر الشراء العائم (Floating CTA) -->
+      {% if settings.enable_buy_button_float %}
+      <div class="floating-buy-btn">
+        <button onclick="location.href='/checkout'" style="background-color:{{ settings.cta_color }};">
+          اشترِ الآن
+        </button>
+      </div>
+      {% endif %}
+      
+      <!-- خيارات الدفع عند الاستلام -->
+      {% if settings.enable_cod %}
+      <div class="cod-info">
+        <p>تدعم الدفع عند الاستلام</p>
+      </div>
+      {% endif %}
+
+      <!-- تفعيل الشراء السريع -->
+      {% if settings.enable_quick_checkout %}
+      <div class="quick-checkout">
+        <button onclick="quickCheckout()" style="background-color:{{ settings.cta_color }};">
+          شراء سريع
+        </button>
+      </div>
+      {% endif %}
+
+      <!-- مؤقت العد التنازلي للعرض -->
+      {% if settings.enable_countdown and settings.offer_end_date != "" %}
+      <div class="countdown-timer" data-end-date="{{ settings.offer_end_date }}">
+        <span id="days">00</span> أيام 
+        <span id="hours">00</span> ساعات 
+        <span id="minutes">00</span> دقائق 
+        <span id="seconds">00</span> ثواني
+      </div>
+      {% endif %}
+
+      <!-- عداد المخزون المتبقي -->
+      {% if settings.enable_stock_counter %}
+      <div class="stock-counter">
+        <p>متبقي <span id="stock-count">{{ product.stock }}</span> قطعة</p>
+      </div>
+      {% endif %}
+
+      <!-- مراجعات العملاء -->
+      {% if settings.enable_real_reviews %}
+      <div class="customer-reviews">
+        {% comment %} سيتم استدعاء مراجعات حقيقية مع الصور والفيديوهات هنا {% endcomment %}
+        <h3>آراء العملاء</h3>
+        <div class="reviews-list">
+          {% for review in product.reviews %}
+            <div class="review">
+              <p class="review-text">{{ review.text }}</p>
+              {% if review.image %}
+                <img src="{{ review.image | img_url: 'medium' }}" alt="مراجعة">
+              {% endif %}
+              <p class="review-author">{{ review.author }}</p>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
+      <!-- نظام الولاء (نقاط المكافآت) -->
+      {% if settings.enable_loyalty_program %}
+      <div class="loyalty-program">
+        <p>احصل على نقاط مكافأة مع كل عملية شراء!</p>
+      </div>
+      {% endif %}
+
+      <!-- عروض الفلاش -->
+      {% if settings.enable_flash_sales %}
+      <div class="flash-sale">
+        <p>عروض فلاش لفترة محدودة!</p>
+      </div>
+      {% endif %}
+      
+    </div>
+  </div>
+</section>

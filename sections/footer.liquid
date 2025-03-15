@@ -1,0 +1,20 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-content">
+      <p>&copy; {{ 'now' | date: '%Y' }} {{ settings.store_name }}. جميع الحقوق محفوظة.</p>
+      <nav class="footer-menu">
+        <ul>
+          <li><a href="/privacy" title="سياسة الخصوصية">سياسة الخصوصية</a></li>
+          <li><a href="/return" title="سياسة الإرجاع">سياسة الإرجاع</a></li>
+          <li><a href="/terms" title="الشروط والأحكام">الشروط والأحكام</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- تضمين ضمان استرجاع الأموال إذا تم تفعيله -->
+    {% if settings.enable_guarantee_badge %}
+      <div class="guarantee-badge">
+        <img src="{{ 'images/guarantee.svg' | asset_url }}" alt="ضمان استرجاع الأموال">
+      </div>
+    {% endif %}
+  </div>
+</footer>

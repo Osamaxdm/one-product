@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ settings.store_name }}</title>
+  
+  {%- comment -%}
+    ربط ملف التنسيق الرئيسي الموجود في assets/styles/style.scss
+    قد تحتاج إلى عملية بناء (build) لتحويل SCSS إلى CSS، لكن هنا نستخدم الرابط كما هو.
+  {%- endcomment -%}
+  <link rel="stylesheet" href="{{ 'styles/style.css' | asset_url }}">
+
+  {%- comment -%}
+    إذا تم تفعيل الوضع الليلي في إعدادات الثيم، يمكننا تحميل ملف إضافي أو تغيير التنسيق عبر JS.
+  {%- endcomment -%}
+</head>
+<body class="{% if settings.enable_dark_mode %}dark-mode{% endif %}">
+
+  {%- comment -%}
+    استدعاء قسم الهيدر
+  {%- endcomment -%}
+  {% section 'header' %}
+
+  {%- comment -%}
+    المحتوى الأساسي للصفحة سيتم عرضه هنا. 
+    في منصة سلة، يتم تعبئة المتغير content_for_layout بالمحتوى الخاص بالصفحة.
+  {%- endcomment -%}
+  {{ content_for_layout }}
+
+  {%- comment -%}
+    استدعاء قسم الفوتر
+  {%- endcomment -%}
+  {% section 'footer' %}
+
+  {%- comment -%}
+    تحميل ملف الجافاسكريبت الرئيسي من assets/scripts/script.js
+  {%- endcomment -%}
+  <script src="{{ 'scripts/script.js' | asset_url }}"></script>
+</body>
+</html>
